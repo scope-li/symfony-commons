@@ -1,0 +1,21 @@
+{
+  "name": "scope-li/symfony-commons",
+  "type": "symfony-bundle",
+  "homepage": "https://github.com/scope-li/symfony-commons",
+  "license": "MIT",
+  "description": "Symfony commons.",
+  "keywords": [
+    "php",
+    "symfony",
+    "bundle"
+  ],
+  "authors": [
+    {
+      "name": "Scope GmbH",
+      "email": "info@scope.li"
+    }
+  ],
+  "require": {
+    "symfony/console": "^4.4"
+  }
+}
