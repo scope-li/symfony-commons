@@ -1,0 +1,7 @@
+services:
+    Scopeli\SymfonyCommons\Command\TranslationCommand:
+        class: Scopeli\SymfonyCommons\Command\TranslationCommand
+        arguments:
+            $locale: '%scopeli.symfony_commons.translation_command.locale%'
+        tags:
+            - { name: console.command }

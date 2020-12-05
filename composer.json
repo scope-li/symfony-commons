@@ -16,6 +16,47 @@
     }
   ],
   "require": {
-    "symfony/console": "^4.4"
+    "php": "^7.4",
+    "symfony/http-kernel": "^4.4|^5.0",
+    "symfony/yaml": "4.4|^5.0"
+  },
+  "require-dev": {
+    "phpmd/phpmd": "^2.9",
+    "squizlabs/php_codesniffer": "^3.5",
+    "phpstan/phpstan": "^0.12.58",
+    "friendsofphp/php-cs-fixer": "^2.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "Scopeli\\SymfonyCommons\\": "src/"
+    }
+  },
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    },
+    "platform": {
+      "php": "7.4"
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "phpcs": [
+      "php vendor/bin/phpcs"
+    ],
+    "phpmd": [
+      "php vendor/bin/phpmd src/ text phpmd.xml"
+    ],
+    "phpstan": [
+      "php vendor/bin/phpstan analyse src/ --level 7"
+    ],
+    "php-cs-fixer": [
+      " php vendor/bin/php-cs-fixer fix src/"
+    ],
+    "test": [
+      "@phpcs",
+      "@phpmd",
+      "@phpstan"
+    ]
   }
 }
